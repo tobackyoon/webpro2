@@ -46,7 +46,7 @@ body {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #cccff8ff;
+  color: #000000ff;
   text-shadow: 0 0 2px #d6ddffff, 0 0 2px #d6ddffff, 0 0 2px #d6ddffff,
     0 0 2px #d6ddffff;
 
@@ -173,12 +173,4 @@ body {
   --left: -1150px;
   --hue: 345deg;
   --angle: 345deg;
-}
-
-.screen {
-  position: absolute;
-  width: 200px;
-  z-index: 1;
-  height: 400px;
-  transform: translate(110%, 30%);
 }

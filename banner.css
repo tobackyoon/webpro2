@@ -47,11 +47,11 @@ body {
   font-weight: 400;
   font-style: normal;
   color: #000000ff;
-  text-shadow: 0 0 2px #d6ddffff, 0 0 2px #d6ddffff, 0 0 2px #d6ddffff,
-    0 0 2px #d6ddffff;
+  text-shadow: 0 0 4px #d6ddffff, 0 0 4px #d6ddffff, 0 0 4px #d6ddffff,
+    0 0 4px #d6ddffff;
 
   width: max-content;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .panel:nth-child(1) {

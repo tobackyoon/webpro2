@@ -1,0 +1,176 @@
+.bebas {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+}
+
+.typing-demo {
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing var(--typing-duration, 2s) steps(var(--typing-steps, 22))
+      forwards,
+    blink 0.6s step-end infinite alternate;
+}
+
+@keyframes typing2 {
+  from {
+    width: 0;
+  }
+  to {
+    width: calc(var(--ch) * 2ch);
+  }
+}
+
+.typing-demo::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 15%;
+  width: 0.1em;
+  height: 70%;
+  background: currentColor;
+  border-radius: 2px;
+  animation: blink2 1s step-end infinite;
+}
+
+/* 타이핑 시작 전 */
+.typing-start {
+  width: 0;
+}
+
+/* 타이핑 길이 제어용 */
+.typing-length-9 {
+  width: 9ch;
+}
+.typing-length-15 {
+  width: 16.8ch;
+}
+.typing-length-12 {
+  width: 10.2ch;
+}
+.typing-length-30 {
+  width: 61ch;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@keyframes blink2 {
+  50% {
+    opacity: 0;
+  }
+}
+
+body {
+  text-align: center;
+}
+
+.info {
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+}
+body {
+  background: #333;
+}
+.snow-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1000;
+  overflow: hidden;
+  box-shadow: 0rem 0rem 4rem inset #00000050;
+}
+body {
+  background: #000;
+}
+
+/* 눈 컨테이너 */
+.snow-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1000;
+  overflow: hidden;
+  box-shadow: inset 0 0 4rem rgba(0, 0, 0, 0.3);
+}
+
+/* 눈 한 알 */
+.snowflake {
+  position: absolute;
+  top: -10px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(50vh) translateX(15px) rotate(180deg);
+  }
+  100% {
+    transform: translateY(100vh) translateX(30px) rotate(360deg);
+  }
+}
+.book-btn {
+  position: fixed;
+  bottom: 38px;
+  left: 8px;
+  z-index: 200;
+
+  padding: 14px 26px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+
+  color: #fff;
+  text-decoration: none;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.2em;
+
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(6px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  transition: background 0.3s ease, box-shadow 0.3s ease,
+    letter-spacing 0.25s ease, transform 0.25s ease;
+}
+
+/* 메인 텍스트 */
+.book-text {
+  font-size: 1.4rem;
+}
+
+/* 서브 라벨 */
+.book-sub {
+  font-size: 0.6rem;
+  opacity: 0.6;
+  margin-top: 2px;
+}
+
+/* hover */
+.book-btn:hover {
+  background: rgba(15, 15, 15, 0.6);
+
+  box-shadow: 0 0 12px rgba(214, 221, 255, 0.35),
+    0 0 24px rgba(214, 221, 255, 0.15);
+
+  letter-spacing: 0.26em;
+  transform: translateY(-1px);
+}

@@ -1,23 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=BBH+Sans+Hegarty&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 .bebas {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
-}
-.bungee {
-  font-family: "Bungee", sans-serif;
-  font-weight: 100;
-}
-.suse {
-  font-family: "SUSE Mono", sans-serif;
-  font-weight: 900;
-}
-.hegarty {
-  font-family: "BBH Sans Hegarty", sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
 .text-box {
@@ -66,6 +51,11 @@
   padding: 10px 20px;
   border-radius: 8px;
 }
+.textbox2 .accent {
+  color: rgba(0, 0, 0, 1);
+  text-shadow: 0 0 4px #d6ddffff, 0 0 2px #d6ddffff, 0 0 1px #d6ddffff,
+    0 0 2px #d6ddffff;
+}
 .textbox3 {
   position: absolute;
   top: 12%;
@@ -80,10 +70,24 @@
   padding: 10px 20px;
   border-radius: 8px;
 }
+.textbox3-1 {
+  position: absolute;
+  top: 19%;
+  left: 11.8%;
+  transform: translate(-50%, -50%);
+  color: rgba(255, 255, 255, 1);
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 0 1px #d6ddffff, 0 0 2px #d6ddffff, 0 0 1px #d6ddffff,
+    0 0 2px #d6ddffff;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
 .textbox4 {
   position: absolute;
-  top: 86%;
-  left: 50.5%;
+  top: 88%;
+  left: 50%;
   transform: translate(-50%, -50%);
   color: rgba(0, 0, 0, 1);
   font-size: 1rem;
@@ -96,7 +100,21 @@
 }
 .textbox5 {
   position: absolute;
-  top: 9%;
+  top: 1%;
+  left: 86.5%;
+  white-space: nowrap;
+  color: rgba(0, 0, 0, 1);
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 0 4px #d6ddffff, 0 0 2px #d6ddffff, 0 0 1px #d6ddffff,
+    0 0 2px #d6ddffff;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+.textbox51 {
+  position: absolute;
+  top: 13%;
   left: 93%;
   transform: translate(-50%, -50%);
   color: rgba(255, 255, 255, 1);
@@ -108,31 +126,62 @@
   padding: 10px 20px;
   border-radius: 8px;
 }
-.textbox6 {
-  position: absolute;
-  top: 20%;
-  left: 93%;
-  transform: translate(-50%, -50%);
-  color: rgba(255, 255, 255, 1);
-  font-size: 3rem;
-  font-weight: bold;
-  text-align: center;
-  text-shadow: 0 0 1px #d6ddffff, 0 0 2px #d6ddffff, 0 0 1px #d6ddffff,
-    0 0 2px #d6ddffff;
-  padding: 10px 20px;
-  border-radius: 8px;
+
+.textbox9 {
+  position: fixed;
+  bottom: 10px;
+  left: 6px;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  line-height: 1.4; /* ✅ 중요 */
+  padding-bottom: 4px; /* ✅ 매우 중요 */
+
+  color: #fff;
+  opacity: 0.75;
+
+  white-space: nowrap;
 }
-.textbox7 {
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+/* TIMETABLE WRAPPER */
+.dj-timetable {
   position: absolute;
-  top: 27%;
-  left: 93.2%;
-  transform: translate(-50%, -50%);
-  color: rgba(255, 255, 255, 1);
+  top: 10%;
+  right: 1%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+
+  text-align: right;
+  color: #fff;
+  z-index: 10;
+}
+
+/* ROW */
+.dj-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* DJ NAME */
+.dj-name {
   font-size: 3rem;
   font-weight: bold;
-  text-align: center;
-  text-shadow: 0 0 1px #d6ddffff, 0 0 2px #d6ddffff, 0 0 1px #d6ddffff,
-    0 0 2px #d6ddffff;
-  padding: 10px 20px;
-  border-radius: 8px;
+  letter-spacing: 0.08em;
+
+  text-shadow: 0 0 2px rgba(214, 221, 255, 0.9),
+    0 0 8px rgba(214, 221, 255, 0.35);
+}
+
+/* TIME */
+.dj-time {
+  margin-top: 6px;
+  font-size: 1.15rem;
+  letter-spacing: 0.18em;
+  opacity: 0.7;
+
+  text-shadow: 0 0 1px rgba(214, 221, 255, 0.6);
 }

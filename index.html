@@ -9,8 +9,11 @@
     <link rel="stylesheet" type="text/css" href="animation.css" />
     <link rel="stylesheet" type="text/css" href="banner.css" />
     <link rel="stylesheet" type="text/css" href="text.css" />
+    <link rel="stylesheet" type="text/css" href="effect.css" />
+    <link rel="stylesheet" type="text/css" href="hover.css" />
   </head>
   <body>
+    <div id="root"></div>
     <div class="scene">
       <div class="banner">
         <div class="panel"></div>
@@ -38,25 +41,99 @@
         <div class="panel"></div>
         <div class="panel"></div>
       </div>
-      <div class="screen"></div>
     </div>
 
     <div class="image-container">
       <img class="center-img" src="centerimg.png" />
-      <img class="logo1 spinY" src="logo3.png" />
-      <img class="logo2 spinY" src="Jacob's creek.png" />
-      <img class="logo3 spinY" src="moet.png" />
+      <img class="logo1 spinY trigger-overlay" src="logo3.png" />
+      <img class="logo2 spinY trigger-overlay" src="Jacob's creek.png" />
+      <img class="logo3 spinY trigger-overlay" src="moet.png" />
+
+      <div class="fullscreen-overlay">
+        <div class="overlay-inner">
+          <h1></h1>
+          <div class="tasting-schedule">
+            <div class="tasting-item">
+              <h3>DOM PERIGNON</h3>
+              <p>TASTING TIME</p>
+              <span>02:00 – 02:30</span>
+            </div>
+
+            <div class="tasting-item">
+              <h3>JACOB’S CREEK</h3>
+              <p>TASTING TIME</p>
+              <span>02:30 – 03:00</span>
+            </div>
+
+            <div class="tasting-item">
+              <h3>MOËT &amp; CHANDON</h3>
+              <p>TASTING TIME</p>
+              <span>03:00 – 03:30</span>
+            </div>
+          </div>
+
+          <div class="overlay-images">
+            <img src="full.png" alt="brand 1" />
+          </div>
+          <p></p>
+        </div>
+      </div>
     </div>
     <div class="textbox-wrapper">
       <div class="textbox2-wrapper">
-        <div class="textbox2 bebas">IN BOLERO</div>
-        <div class="textbox3 bebas">2025.12.25</div>
+        <div class="textbox2 bebas typing-demo typing-start typing-length-9">
+          IN <span class="accent">BOLERO</span>
+        </div>
+        <div class="textbox3 bebas typing-demo typing-start typing-length-12">
+          2025.12.25
+        </div>
+        <div class="textbox3-1 bebas typing-demo typing-start typing-length-15">
+          DOOR OPEN AT 22:00
+        </div>
         <div class="textbox4 bebas">sponsered by</div>
-        <div class="textbox5 bebas">dj soulscape</div>
-        <div class="textbox6 bebas">shlee</div>
-        <div class="textbox7 bebas">mello</div>
+        <div class="textbox5 bebas">DJ TIME TABLE</div>
+        <div class="dj-timetable bebas">
+          <div class="dj-row">
+            <div class="dj-name">Soulscape</div>
+            <div class="dj-time">22:00 – 23:30</div>
+          </div>
+
+          <div class="dj-row">
+            <div class="dj-name">sh lee</div>
+            <div class="dj-time">23:30 – 01:00</div>
+          </div>
+
+          <div class="dj-row">
+            <div class="dj-name">mello</div>
+            <div class="dj-time">01:00 – 02:30</div>
+          </div>
+
+          <div class="dj-row">
+            <div class="dj-name">tezz</div>
+            <div class="dj-time">02:30 – 04:00</div>
+          </div>
+        </div>
+
+        <div class="textbox9 bebas typing-demo typing-start typing-length-30">
+          220 B1,Itaewon-ro,Yongsan-gu,Seoul,Republic of korea
+        </div>
       </div>
     </div>
+    <a
+      href="https://www.google.com/maps/place/BOLEROSEOUL/data=!4m2!3m1!1s0x0:0xe05249b3e720d2b9?sa=X&ved=1t:2428&ictx=111"
+      class="book-btn">
+      <span class="book-text">BOOK NOW</span>
+      <span class="book-sub">RESERVATION</span>
+    </a>
+
+    <div class="snow-container"></div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
   </body>
 </html>
 <style></style>

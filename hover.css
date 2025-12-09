@@ -1,0 +1,132 @@
+/* ================================
+   IMAGE CONTAINER
+================================ */
+.image-container {
+  position: relative;
+}
+
+/* ================================
+   LOGOS (hover trigger)
+================================ */
+.logo1,
+.logo2,
+.logo3 {
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* ❌ hover 확장용 ::after 제거 (불안정 원인) */
+
+/* ================================
+   FULLSCREEN OVERLAY
+================================ */
+.fullscreen-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+
+  /* 부드러운 뒷배경 */
+  background: rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(6px);
+
+  /* 렌더 안정화 */
+  will-change: opacity;
+  transform: translateZ(0);
+}
+
+/* ✅ 실제 존재하는 로고 hover 시 오버레이 ON */
+.logo1:hover ~ .fullscreen-overlay,
+.logo2:hover ~ .fullscreen-overlay,
+.logo3:hover ~ .fullscreen-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ================================
+   OVERLAY IMAGES (투과도는 여기서만)
+================================ */
+.overlay-images {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.overlay-images img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+
+  opacity: 0.3; /* ✅ 정상값 */
+}
+
+/* ================================
+   OVERLAY CONTENT (TEXT)
+================================ */
+.overlay-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: #fff;
+}
+
+/* Bebas Neue */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+/* 하단 타임테이블 래퍼 */
+.tasting-schedule {
+  position: absolute;
+  bottom: 8%;
+  left: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8%;
+
+  font-family: "Bebas Neue", sans-serif;
+  color: #fff;
+  z-index: 20;
+}
+
+/* 각 타임 블록 */
+.tasting-item {
+  width: 30%;
+  text-align: center;
+  letter-spacing: 0.12em;
+}
+
+/* 브랜드명 */
+.tasting-item h3 {
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  margin-bottom: 8px;
+}
+
+/* 설명 */
+.tasting-item p {
+  font-size: 0.9rem;
+  opacity: 0.75;
+  margin-bottom: 6px;
+}
+
+/* 시간 */
+.tasting-item span {
+  font-size: clamp(1.2rem, 2.2vw, 2.6rem);
+}
+/* 왼쪽 타임테이블 */
+.tasting-item:first-child {
+  padding-right: 135px;
+}
+
+/* 오른쪽 타임테이블 */
+.tasting-item:last-child {
+  padding-left: 135px;
+}

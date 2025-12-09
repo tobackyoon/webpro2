@@ -32,10 +32,33 @@ body {
 
 .panel {
   position: absolute;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, 190%) rotateY(var(--angle)) translateZ(190px);
   width: 50px;
   height: 140px;
   overflow: hidden;
+
+  /* 아래 회전할 때 천천히 opacity 투명도가 뒤로갈때 흐려졌다가 나타날 수 있도록 애니메이션 조정
+  아래 keyframes fade로 적용.*/
+  animation-name: fade;
+  animation-duration: 24s; /* 글자 수에 따라 회전과 동일하게 */
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: calc(var(--step) * (24s / 24));
+}
+
+@keyframes fade {
+  0%,
+  25%,
+  75%,
+  100% {
+    opacity: 1;
+  }
+  45%,
+  55% {
+    opacity: 0;
+  }
 }
 
 .panel::before {
@@ -47,7 +70,7 @@ body {
   font-weight: 400;
   font-style: normal;
   color: #000000ff;
-  text-shadow: 0 0 4px #d6ddffff, 0 0 4px #d6ddffff, 0 0 4px #d6ddffff,
+  text-shadow: 0 0 4px #ffffffff, 0 0 4px #d6ddffff, 0 0 4px #d6ddffff,
     0 0 4px #d6ddffff;
 
   width: max-content;
@@ -58,119 +81,145 @@ body {
   --left: 0px;
   --hue: 0deg;
   --angle: 0deg;
+
+  /* 각 패널에 순차적으로 애니메이션 딜레이 적용할 수 있도록 --step 인덱스 변수값 적용 */
+  --step: 1;
 }
 .panel:nth-child(2) {
   --left: -50px;
   --hue: 15deg;
   --angle: 15deg;
+  --step: 2;
 }
 .panel:nth-child(3) {
   --left: -100px;
   --hue: 30deg;
   --angle: 30deg;
+  --step: 3;
 }
 .panel:nth-child(4) {
   --left: -150px;
   --hue: 45deg;
   --angle: 45deg;
+  --step: 4;
 }
 .panel:nth-child(5) {
   --left: -200px;
   --hue: 60deg;
   --angle: 60deg;
+  --step: 5;
 }
 .panel:nth-child(6) {
   --left: -250px;
   --hue: 75deg;
   --angle: 75deg;
+  --step: 6;
 }
 .panel:nth-child(7) {
   --left: -300px;
   --hue: 90deg;
   --angle: 90deg;
+  --step: 7;
 }
 .panel:nth-child(8) {
   --left: -350px;
   --hue: 105deg;
   --angle: 105deg;
+  --step: 8;
 }
 .panel:nth-child(9) {
   --left: -400px;
   --hue: 120deg;
   --angle: 120deg;
+  --step: 9;
 }
 .panel:nth-child(10) {
   --left: -450px;
   --hue: 135deg;
   --angle: 135deg;
+  --step: 10;
 }
 .panel:nth-child(11) {
   --left: -500px;
   --hue: 150deg;
   --angle: 150deg;
+  --step: 11;
 }
 .panel:nth-child(12) {
   --left: -550px;
   --hue: 165deg;
   --angle: 165deg;
+  --step: 12;
 }
 .panel:nth-child(13) {
   --left: -600px;
   --hue: 180deg;
   --angle: 180deg;
+  --step: 13;
 }
 .panel:nth-child(14) {
   --left: -650px;
   --hue: 195deg;
   --angle: 195deg;
+  --step: 14;
 }
 .panel:nth-child(15) {
   --left: -700px;
   --hue: 210deg;
   --angle: 210deg;
+  --step: 15;
 }
 .panel:nth-child(16) {
   --left: -750px;
   --hue: 225deg;
   --angle: 225deg;
+  --step: 16;
 }
 .panel:nth-child(17) {
   --left: -800px;
   --hue: 240deg;
   --angle: 240deg;
+  --step: 17;
 }
 .panel:nth-child(18) {
   --left: -850px;
   --hue: 255deg;
   --angle: 255deg;
+  --step: 18;
 }
 .panel:nth-child(19) {
   --left: -900px;
   --hue: 270deg;
   --angle: 270deg;
+  --step: 19;
 }
 .panel:nth-child(20) {
   --left: -950px;
   --hue: 285deg;
   --angle: 285deg;
+  --step: 20;
 }
 .panel:nth-child(21) {
   --left: -1000px;
   --hue: 300deg;
   --angle: 300deg;
+  --step: 21;
 }
 .panel:nth-child(22) {
   --left: -1050px;
   --hue: 315deg;
   --angle: 315deg;
+  --step: 22;
 }
 .panel:nth-child(23) {
   --left: -1100px;
   --hue: 330deg;
   --angle: 330deg;
+  --step: 23;
 }
 .panel:nth-child(24) {
   --left: -1150px;
   --hue: 345deg;
   --angle: 345deg;
+  --step: 24;
 }
